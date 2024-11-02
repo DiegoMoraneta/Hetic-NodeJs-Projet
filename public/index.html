@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Server</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>File Server</h1>
+
+    <!-- Section Inscription -->
+    <div class="form-section" id="register-section">
+      <h2>Inscription</h2>
+      <input type="text" id="register-username" placeholder="Nom d'utilisateur">
+      <input type="password" id="register-password" placeholder="Mot de passe">
+      <button onclick="register()">S'inscrire</button>
+      <p id="register-message"></p>
+    </div>
+
+    <!-- Section Connexion -->
+    <div class="form-section" id="login-section">
+      <h2>Connexion</h2>
+      <input type="text" id="login-username" placeholder="Nom d'utilisateur">
+      <input type="password" id="login-password" placeholder="Mot de passe">
+      <button onclick="login()">Se connecter</button>
+      <p id="login-message"></p>
+    </div>
+
+    <!-- Section Upload de fichier -->
+    <div class="form-section" id="file-section" style="display: none;">
+      <h2>Uploader un Fichier</h2>
+      <input type="file" id="file-input">
+      <button onclick="uploadFile()">Uploader</button>
+      <p id="upload-message"></p>
+    </div>
+
+    <!-- Section Lien de partage -->
+    <div class="form-section" id="share-section" style="display: none;">
+      <h2>Créer un Lien de Partage</h2>
+      <input type="text" id="file-id" placeholder="ID du Fichier">
+      <input type="number" id="expires-in" placeholder="Durée de validité en heures">
+      <button onclick="createShareLink()">Créer un lien</button>
+      <p id="share-message"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
